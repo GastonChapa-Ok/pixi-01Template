@@ -12,10 +12,11 @@ const app = new Application({
 });
 
 //const myLoader = new Loader();
-//Se agregab las imagenes para
+//Se agrego las imagenes para
 Loader.shared.add({url: "./donkeyKong.png", name : "myMono"})
 Loader.shared.add({url: "./clampy.png", name : "Clampy)"})
 
+//Function
 Loader.shared.onComplete.add(() =>{
 	const clampy: Sprite = Sprite.from("myMono");
 
