@@ -5,18 +5,21 @@ const app = new Application({
 	resolution: window.devicePixelRatio || 1,
 	autoDensity: true,
 	backgroundColor: 0x6495ed,
-	width: 640,
-	height: 480
+	//width: 640,
+	//height: 480
+	width: 1280,
+	height: 960
 });
 
 //const myLoader = new Loader();
-
-Loader.shared.add({url: "./donkeyKong.png", name : "myMono)"})
+//Se agregab las imagenes para
+Loader.shared.add({url: "./donkeyKong.png", name : "myMono"})
 Loader.shared.add({url: "./clampy.png", name : "Clampy)"})
 
 Loader.shared.onComplete.add(() =>{
-	const clampy: Sprite = Sprite.from("donkeyKong.png");
-	console.log("Hola mundo!", clampy.width, clampy.height);
+	const clampy: Sprite = Sprite.from("myMono");
+
+	console.log("Hola mi mundo!", clampy.width, clampy.height);
 
 	//clampy.anchor.set(0);
 
@@ -26,4 +29,5 @@ Loader.shared.onComplete.add(() =>{
 	app.stage.addChild(clampy);
 });
 
+//Descarga de la imagenes
 Loader.shared.load();
