@@ -9,6 +9,7 @@ Loader.shared.add({url: "./marioBros.png", name : "mario"})
 =[{},{}] -> Arreglo con dos objetos
 */
 export const assets = [
+    
     {url: "./donkeyKong.png", name : "myMono"},
     {url: "./marioBros.png", name : "mario"},
     {url: "./Run (1).png", name : "Run01"},
@@ -21,7 +22,11 @@ export const assets = [
     {url: "./Run (8).png", name : "Run08"},
     {url: "./Windows.svg", name : "Windows"},
     {url: "./Windows2.png", name : "Windows2"},
-    {url: "./ButtomSimple.png", name : "BSimple"},
-    {url: "./ButtomPress.png", name : "BPress"},
+    {url: "./Bsimple.png", name : "Bsimple"},
+    {url: "./BPress.png", name : "BPress"},
+    {url: "./BDown.png", name : "BDown"},
+    {url: "./BOut.png", name : "BOut"},
+    {url: "./BOver.png", name : "BOver"},
+    {url: "./BUp.png", name : "BUp"},
     {url: "./Button1.png", name : "Button1"}
 ];

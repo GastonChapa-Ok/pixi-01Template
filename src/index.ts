@@ -1,6 +1,7 @@
 import { Application, Loader} from 'pixi.js'
 import { assets } from './assets';
-import { UIDemo } from './Scene/UIDemo';
+import { UIDemo } from './scene/UIDemo';
+import { Keyboard } from './utils/Keyboard';
 
 
 const app = new Application({
@@ -13,6 +14,8 @@ const app = new Application({
 	width: 1280,
 	height: 960
 });
+
+Keyboard.initialize();
 
 //Rescalado de relación de aspecto
 window.addEventListener("resize", ()=>{
