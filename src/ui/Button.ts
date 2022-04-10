@@ -5,18 +5,16 @@ export class Button extends Container{
     private def:Texture;
     private down:Texture;
     private over:Texture;
-    private callback:Function;
 
     private spr:Sprite;
 
-    constructor(def:Texture, down:Texture, over:Texture, callback:Function){
+    constructor(def:Texture, down:Texture, over:Texture){
         super();
 
         this.def = def;
         this.down = down;
         this.over = over;
-        this.callback = callback;
-
+        
         this.spr = Sprite.from("BUp");
         this.spr.anchor.set(0.5);
         this.addChild(this.spr);
@@ -32,7 +30,7 @@ export class Button extends Container{
     private onMouseUp():void{
         console.log("Suelto el mouse");
         console.log("Cuando suelto el boton tiene que hacer algo");
-        this.callback();
+        this.emit("buttonClick");
         this.spr.texture = this.over;
     }
 
