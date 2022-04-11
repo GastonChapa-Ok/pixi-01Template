@@ -1,6 +1,6 @@
-import { Application, Loader} from 'pixi.js'
+import { Application, Loader, Ticker} from 'pixi.js'
 import { assets } from './assets';
-import { Clase05 } from './scene/Clase05';
+import { TickerScene } from './scene/TickerScene';
 //import { UIDemo } from './scene/UIDemo';
 import { Keyboard } from './utils/Keyboard';
 
@@ -99,8 +99,13 @@ Loader.shared.onComplete.add(() =>{
 	//const myScene = new UIDemo();
 	//app.stage.addChild(myScene);
 
-	const boyAnim = new Clase05();
-	app.stage.addChild(boyAnim);
+	//const boyAnim = new Clase05();
+	const myScene = new TickerScene();
+	app.stage.addChild(myScene);
+
+	Ticker.shared.add(function (deltaframe){
+		myScene.update(Ticker.shared.deltaMS, deltaframe);
+	})
 
 });
 
