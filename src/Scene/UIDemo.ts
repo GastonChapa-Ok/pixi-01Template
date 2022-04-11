@@ -61,6 +61,6 @@ export class UIDemo extends Container{
     }
 
     private onButtonClick():void{
-        console.log("mi nuevo boton clickeado",this);
+        console.log("mi nuevo boton clickeado",this)
     }
 }

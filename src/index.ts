@@ -1,6 +1,7 @@
 import { Application, Loader} from 'pixi.js'
 import { assets } from './assets';
-import { UIDemo } from './scene/UIDemo';
+import { Clase05 } from './scene/Clase05';
+//import { UIDemo } from './scene/UIDemo';
 import { Keyboard } from './utils/Keyboard';
 
 
@@ -95,8 +96,11 @@ Loader.shared.onComplete.add(() =>{
 	//const myScene:Scene = new Scene();
 	//app.stage.addChild(myScene);
 
-	const myScene = new UIDemo();
-	app.stage.addChild(myScene);
+	//const myScene = new UIDemo();
+	//app.stage.addChild(myScene);
+
+	const boyAnim = new Clase05();
+	app.stage.addChild(boyAnim);
 
 });
 

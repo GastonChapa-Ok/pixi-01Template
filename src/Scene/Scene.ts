@@ -32,6 +32,7 @@ export class Scene extends Container{
         );
         boyAnimated.play();
         boyAnimated.animationSpeed = 0.35;
+        boyAnimated.scale.set(.5);
         this.addChild(boyAnimated);
 
         const uiDemo:UIDemo = new UIDemo();
